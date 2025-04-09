@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "LogonAcknowledgment",
+  "type": "object",
+  "required": ["status", "iid", "sic_iid", "qr_iid", "bic", "uuid"],
+  "properties": {
+    "status": { "type": "string", "enum": ["OK"] },
+    "iid": { "type": "string", "maxLength": 5 },
+    "sic_iid": { "type": "string", "maxLength": 6 },
+    "qr_iid": { "type": "string", "maxLength": 5 },
+    "bic": { "type": "string", "pattern": "^[A-Z0-9]{11}$" },
+    "uuid": { "type": "string", "format": "uuid" }
+  }
+}

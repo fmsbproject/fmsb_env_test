@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "LogonRequest",
+  "type": "object",
+  "required": ["fi_name", "street_name", "building_number", "post_code", "town_name", "country", "hq", "iid_type", "sic_participation", "rtgs_cust_paym_chf", "ip_cust_paym_chf", "eurosic_participation", "lsv_bdd_chf", "lsv_bdd_eur", "UID", "uuid"],
+  "properties": {
+    "fi_name": { "type": "string", "maxLength": 60 },
+    "street_name": { "type": "string", "maxLength": 35 },
+    "building_number": { "type": "string", "maxLength": 16 },
+    "post_code": { "type": "string", "maxLength": 16 },
+    "town_name": { "type": "string", "maxLength": 35 },
+    "country": { "type": "string", "pattern": "^[A-Z]{2}$" },
+    "hq": { "type": "string", "enum": ["TRUE", "FALSE"] },
+    "iid_type": { "type": "string", "enum": ["0", "1"] },
+    "sic_participation": { "type": "string", "enum": ["Y", "N"] },
+    "rtgs_cust_paym_chf": { "type": "string", "enum": ["Y", "N"] },
+    "ip_cust_paym_chf": { "type": "string", "enum": ["Y", "N"] },
+    "eurosic_participation": { "type": "string", "enum": ["Y", "N"] },
+    "lsv_bdd_chf": { "type": "string", "enum": ["Y", "N"] },
+    "lsv_bdd_eur": { "type": "string", "enum": ["Y", "N"] },
+    "uid": { "type": "string", "pattern": "^CHE[0-9]{9}$" },
+    "uuid": { "type": "string", "format": "uuid" }
+  }
+}

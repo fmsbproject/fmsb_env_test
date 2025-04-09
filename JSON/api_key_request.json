@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ApiKeyAndDscRequest",
+  "type": "object",
+  "required": ["sic_id", "uuid", "api_key_req", "pub_cert_req"],
+  "properties": {
+    "sic_id": { "type": "string", "maxLength": 6 },
+    "uuid": { "type": "string", "format": "uuid" },
+    "api_key_req": { "type": "string", "enum": ["TRUE", "FALSE"] },
+    "pub_cert_req": { "type": "string", "enum": ["TRUE", "FALSE"] }
+  }
+}

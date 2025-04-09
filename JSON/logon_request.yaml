@@ -1,0 +1,85 @@
+$schema: http://json-schema.org/draft-07/schema#
+properties:
+  uid:
+    pattern: ^CHE[0-9]{9}$
+    type: string
+  building_number:
+    maxLength: 16
+    type: string
+  country:
+    pattern: ^[A-Z]{2}$
+    type: string
+  eurosic_participation:
+    enum:
+    - Y
+    - N
+    type: string
+  fi_name:
+    maxLength: 60
+    type: string
+  hq:
+    enum:
+    - 'TRUE'
+    - 'FALSE'
+    type: string
+  iid_type:
+    enum:
+    - '0'
+    - '1'
+    type: string
+  ip_cust_paym_chf:
+    enum:
+    - Y
+    - N
+    type: string
+  lsv_bdd_chf:
+    enum:
+    - Y
+    - N
+    type: string
+  lsv_bdd_eur:
+    enum:
+    - Y
+    - N
+    type: string
+  post_code:
+    maxLength: 16
+    type: string
+  rtgs_cust_paym_chf:
+    enum:
+    - Y
+    - N
+    type: string
+  sic_participation:
+    enum:
+    - Y
+    - N
+    type: string
+  street_name:
+    maxLength: 35
+    type: string
+  town_name:
+    maxLength: 35
+    type: string
+  uuid:
+    format: uuid
+    type: string
+required:
+- fi_name
+- street_name
+- building_number
+- post_code
+- town_name
+- country
+- hq
+- iid_type
+- sic_participation
+- rtgs_cust_paym_chf
+- ip_cust_paym_chf
+- eurosic_participation
+- lsv_bdd_chf
+- lsv_bdd_eur
+- uid
+- uuid
+title: LogonRequest
+type: object

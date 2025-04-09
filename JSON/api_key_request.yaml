@@ -1,0 +1,25 @@
+$schema: http://json-schema.org/draft-07/schema#
+properties:
+  api_key_req:
+    enum:
+    - 'TRUE'
+    - 'FALSE'
+    type: string
+  pub_cert_req:
+    enum:
+    - 'TRUE'
+    - 'FALSE'
+    type: string
+  sic_id:
+    maxLength: 6
+    type: string
+  uuid:
+    format: uuid
+    type: string
+required:
+- sic_id
+- uuid
+- api_key_req
+- pub_cert_req
+title: ApiKeyAndDscRequest
+type: object

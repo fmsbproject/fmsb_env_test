@@ -1,0 +1,22 @@
+$schema: http://json-schema.org/draft-07/schema#
+properties:
+  api_key_rsp:
+    format: uuid
+    type: string
+  pub_cert_rsp:
+    type: string
+  status:
+    enum:
+    - OK
+    - NOK
+    type: string
+  uuid:
+    format: uuid
+    type: string
+required:
+- status
+- uuid
+- api_key_rsp
+- pub_cert_rsp
+title: ApiKeyAndDscAcknowledgment
+type: object

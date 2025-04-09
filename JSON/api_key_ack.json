@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ApiKeyAndDscAcknowledgment",
+  "type": "object",
+  "required": ["status", "uuid", "api_key_rsp", "pub_cert_rsp"],
+  "properties": {
+    "status": { "type": "string", "enum": ["OK", "NOK"] },
+    "uuid": { "type": "string", "format": "uuid" },
+    "api_key_rsp": { "type": "string", "format": "uuid" },
+    "pub_cert_rsp": { "type": "string" }
+  }
+}

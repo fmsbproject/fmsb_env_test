@@ -1,0 +1,30 @@
+$schema: http://json-schema.org/draft-07/schema#
+properties:
+  bic:
+    pattern: ^[A-Z0-9]{11}$
+    type: string
+  iid:
+    maxLength: 5
+    type: string
+  qr_iid:
+    maxLength: 5
+    type: string
+  sic_iid:
+    maxLength: 6
+    type: string
+  status:
+    enum:
+    - OK
+    type: string
+  uuid:
+    format: uuid
+    type: string
+required:
+- status
+- iid
+- sic_iid
+- qr_iid
+- bic
+- uuid
+title: LogonAcknowledgment
+type: object
