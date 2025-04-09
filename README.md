@@ -1,4 +1,4 @@
-# fmsb_schmea_test
+# fmsb_env_test
 This repositiory contains the schema of JSON messages to be shared between FMSB and the Client API's.
 Logon Request
 Logon Acknowledgment
