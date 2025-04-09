@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="http://www.six-interbank-clearing.com/de/pacs.009.001.08.ch.03">
+  <FICdtTrf> <!--[Mandatory]-->
+    <GrpHdr>       <!--[Mandatory]-->
+      <!-- Message Identification - unique identifier [Mandatory] -->
+      <MsgId>20250307EUROCB00001</MsgId>
+     
+      <!-- Creation Date Time -->
+      <CreDtTm>2025-03-07T14:30:00</CreDtTm>   <!--[Mandatory]-->
+     
+      <!-- Number of Transactions - must be "1" -->
+      <NbOfTxs>1</NbOfTxs>  <!--[Mandatory]-->
+     
+      <!-- Total Interbank Settlement Amount - now in EUR --> <!--[Mandatory]-->
+      <TtlIntrBkSttlmAmt Ccy="EUR">5000.00</TtlIntrBkSttlmAmt>
+      
+       <!-- Settlement Information -->
+      <SttlmInf> <!--[Mandatory]-->
+        <!-- Settlement Method - Clearing -->
+        <SttlmMtd>CLRG</SttlmMtd> <!--[Mandatory]-->
+        <ClrSys> <!-- Clearing system details -->
+           <Cd>SIC</Cd>
+        </ClrSys>
+      </SttlmInf>
+      
+      <!-- Interbank Settlement Date - today's date -->
+      <!--IntrBkSttlmDt>2025-03-07</IntrBkSttlmDt--> <!--[Mandatory]-->
+    </GrpHdr> 
+     
+     
+     
+   
+    <!-- Credit Transfer Transaction Information -->
+    <CdtTrfTxInf>  <!--[Mandatory]-->
+      <!-- Payment Identification -->
+      <PmtId>   <!--[Mandatory]-->
+        <!-- Additional Transaction Identification - using UETR format -->
+        <InstrId>UETa1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6</InstrId>
+       
+        <!-- End To End Identification - Debtor Reference -->
+        <EndToEndId>MICHAEL2JACKSON</EndToEndId> <!--[Mandatory]-->
+          <!-- Transaction Identification -->
+        <TxId>TX2025030700001</TxId> <!--[Mandatory]-->
+        <UETR>1a2b3c4d-5e6f-4a3b-8c9d-0123456789ab</UETR>
+      
+      </PmtId>
+      <!-- Payment Type Information -->
+      <PmtTpInf>  <!--[Mandatory]-->
+        <!-- Local Instrument - Payment Type -->
+        <LclInstrm>   <!--[Mandatory]-->
+          <Prtry>SEPA</Prtry>
+        </LclInstrm>
+      </PmtTpInf>
+      
+       <!-- Interbank Settlement Amount - now in EUR -->
+      <IntrBkSttlmAmt Ccy="EUR">5000.00</IntrBkSttlmAmt>  <!--[Mandatory]-->
+      <IntrBkSttlmDt>2025-03-07</IntrBkSttlmDt>  
+
+       <!-- Settlement Priority -->
+      <SttlmPrty>HIGH</SttlmPrty>
+           
+      <!-- Settlement Time Indication -->
+      <SttlmTmIndctn>
+        <DbtDtTm>2025-03-07T15:00:00</DbtDtTm>
+      </SttlmTmIndctn>
+     
+     
+     
+
+      
+       <!-- Instructing Agent (Sending Financial Institution) - Euro Central Bank -->
+      <InstgAgt>  <!--[Mandatory]-->  
+        <FinInstnId>  <!--[Mandatory]-->
+          <BICFI>ECBFDEFFXXX</BICFI>
+          <ClrSysMmbId>
+            <ClrSysId>            
+              <Cd>CHSIC</Cd>
+            </ClrSysId>
+            <MmbId>123456</MmbId>
+          </ClrSysMmbId>
+          <!--Nm>European Central Bank</Nm-->
+        </FinInstnId>
+      </InstgAgt>
+     
+      <!-- Instructed Agent (Receiving Financial Institution) - Swiss Central Bank -->
+      <InstdAgt>                      <!--[Mandatory]-->
+        <FinInstnId>                  <!--[Mandatory]-->
+          <BICFI>SNBZCHZZXXX</BICFI>
+          <ClrSysMmbId>
+            <ClrSysId>
+              <Cd>CHSIC</Cd>
+            </ClrSysId>
+            <MmbId>654321</MmbId>
+          </ClrSysMmbId>
+          <!--Nm>Swiss National Bank</Nm-->
+        </FinInstnId>
+      </InstdAgt>
+    
+     
+      
+     
+     
+      <!-- Underlying Customer Credit Transfer -->
+      <!--UndrlygCstmrCdtTrf-->
+        <!-- Debtor section - Michael -->
+        <!--Dbtr>
+          <Nm>Michael</Nm>
+          <PstlAdr>
+            <StrtNm>Kaiserstrasse</StrtNm>
+            <BldgNb>29</BldgNb>
+            <PstCd>60311</PstCd>
+            <TwnNm>Frankfurt</TwnNm>
+            <Ctry>DE</Ctry>
+          </PstlAdr>
+        </Dbtr-->
+       
+        <!-- Debtor Account -->
+        <!---DbtrAcct>
+          <Id>
+            <IBAN>DE89370400440532013000</IBAN>
+          </Id>
+        </DbtrAcct-->
+       
+        <!-- Debtor Agent - Euro Central Bank -->
+        <!--DbtrAgt>
+          <FinInstnId>
+            <BIC>ECBFDEFFXXX</BIC>
+            <Nm>European Central Bank</Nm>
+          </FinInstnId>
+        </DbtrAgt-->
+       
+        <!-- Debtor Agent Account -->
+        <!--DbtrAgtAcct>
+          <Id>
+            <IBAN>DE89370400440532013001</IBAN>
+          </Id>
+        </DbtrAgtAcct-->
+       
+        <!-- Creditor Agent - Swiss National Bank -->
+        <!--CdtrAgt>
+          <FinInstnId>
+            <BIC>SNBZCHZZXXX</BIC>
+            <Nm>Swiss National Bank</Nm>
+          </FinInstnId>
+        </CdtrAgt-->
+       
+        <!-- Creditor Agent Account -->
+        <!--CdtrAgtAcct>
+          <Id>
+            <IBAN>CH9300762011623852999</IBAN>
+          </Id>
+        </CdtrAgtAcct-->
+       
+        <!-- Creditor - Jackson -->
+        <!--Cdtr>
+          <Nm>Jackson</Nm>
+          <PstlAdr>
+            <StrtNm>Börsenstrasse</StrtNm>
+            <BldgNb>15</BldgNb>
+            <PstCd>8001</PstCd>
+            <TwnNm>Zurich</TwnNm>
+            <Ctry>CH</Ctry>
+          </PstlAdr>
+        </Cdtr-->
+       
+        <!-- Creditor Account -->
+        <!--CdtrAcct>
+          <Id>
+            <IBAN>CH9300762011623853000</IBAN>
+          </Id>
+        </CdtrAcct-->
+       
+        <!-- Instructed Amount - in EUR -->
+        <!--InstdAmt Ccy="EUR">5000.00</InstdAmt-->
+       
+        <!-- Remittance Information -->
+        <!--RmtInf>
+          <Ustrd>Payment from Michael to Jackson</Ustrd>
+          <Strd>
+            <AddtlRmtInf>SEPA transfer</AddtlRmtInf>
+            <AddtlRmtInf>URGENT TRANSFER</AddtlRmtInf>
+          </Strd>
+        </RmtInf>
+      </UndrlygCstmrCdtTrf-->
+     
+      <!-- Intermediary Agent 1 - not required but kept for structure -->
+      <IntrmyAgt1>
+        <FinInstnId>
+          <BICFI>MARKDEFFXXX</BICFI>
+          <Nm>Deutsche Bundesbank</Nm>
+        </FinInstnId>
+      </IntrmyAgt1>
+     
+      <!-- Intermediary Agent 1 Account -->
+      <IntrmyAgt1Acct>
+        <Id>
+          <IBAN>DE35500000000000000000</IBAN>
+        </Id>
+      </IntrmyAgt1Acct>
+     
+      <!-- Debtor (Sending Institution) - Euro Central Bank -->
+      <Dbtr> <!--[Mandatory]-->
+        <FinInstnId> <!--[Mandatory]-->
+          <BICFI>ECBFDEFFXXX</BICFI>
+          <Nm>European Central Bank</Nm>
+        </FinInstnId>
+      </Dbtr>
+     
+      <!-- Debtor Account -->
+      <DbtrAcct>
+        <Id>
+          <IBAN>DE89370400440532013001</IBAN>
+        </Id>
+      </DbtrAcct>
+     
+      <!-- Creditor Agent - Swiss National Bank -->
+      <CdtrAgt>
+        <FinInstnId>
+          <BICFI>SNBZCHZZXXX</BICFI>
+          <Nm>Swiss National Bank</Nm>
+        </FinInstnId>
+      </CdtrAgt>
+     
+      <!-- Creditor Agent Account -->
+      <CdtrAgtAcct>
+        <Id>
+          <IBAN>CH9300762011623852999</IBAN>
+        </Id>
+      </CdtrAgtAcct>
+     
+      <!-- Creditor (Receiving Institution) - Swiss National Bank -->
+      <Cdtr>
+        <FinInstnId>
+          <BICFI>SNBZCHZZXXX</BICFI>
+          <Nm>Swiss National Bank</Nm>
+        </FinInstnId>
+      </Cdtr>
+     
+      <!-- Creditor Account -->
+      <CdtrAcct>
+        <Id>
+          <IBAN>CH9300762011623853000</IBAN>
+        </Id>
+      </CdtrAcct>
+     
+      <!-- Instructions For Creditor Agent -->
+      <InstrForCdtrAgt>
+        <InstrInf>Payment requires immediate processing</InstrInf>
+      </InstrForCdtrAgt>
+     
+      <!-- Instructions For Next Agent -->
+      <InstrForNxtAgt>
+        <InstrInf>CONF</InstrInf>
+      </InstrForNxtAgt>
+      <InstrForNxtAgt>
+        <InstrInf>LIQU</InstrInf>
+      </InstrForNxtAgt>
+     
+      <!-- Remittance Information -->
+      <RmtInf>
+        <!--Ustrd>EUR</Ustrd-->
+        <Ustrd>5000.00 1.0000</Ustrd>
+        <!--Ustrd>1.0000</Ustrd-->
+      </RmtInf>
+    </CdtTrfTxInf>
+  </FICdtTrf>
+</Document>

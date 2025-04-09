@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="http://www.six-interbank-clearing.com/de/pacs.008.001.08.ch.02">
+    <FIToFICstmrCdtTrf>
+        <GrpHdr>
+            <MsgId>20250221BANKX12345678</MsgId>
+            <CreDtTm>2025-02-21T12:00:00</CreDtTm>
+            <NbOfTxs>1</NbOfTxs>
+            <!--BtchBookg>false</BtchBookg-->
+            <TtlIntrBkSttlmAmt Ccy="EUR">1000.00</TtlIntrBkSttlmAmt>
+            <SttlmInf>
+                <SttlmMtd>CLRG</SttlmMtd>
+                <ClrSys>
+                    <Cd>SIC</Cd>
+                </ClrSys>
+            </SttlmInf>
+        </GrpHdr>
+        <CdtTrfTxInf>
+            <PmtId>
+                <InstrId>INSTRID20250221001</InstrId>
+                <EndToEndId>E2EID20250221001</EndToEndId>
+                <TxId>TX20250221001</TxId>
+                <UETR>1a2b3c4d-5e6f-4a3b-8c9d-0123456789ab</UETR>
+            </PmtId>
+            <PmtTpInf>
+                <InstrPrty>NORM</InstrPrty>
+                <SvcLvl>
+                   <Cd>SIC</Cd>
+                </SvcLvl>
+                <LclInstrm>  <!-- Add this if required by the XSD -->
+                   <Prtry>SIC</Prtry>
+                </LclInstrm>
+                <CtgyPurp>
+                   <Cd>SALA</Cd>
+                </CtgyPurp>
+           </PmtTpInf>
+            <IntrBkSttlmAmt Ccy="EUR">1000.00</IntrBkSttlmAmt>
+            <IntrBkSttlmDt>2025-02-21</IntrBkSttlmDt>
+            <ChrgBr>SLEV</ChrgBr>
+            <ChrgsInf>
+                <Amt Ccy="CHF">5.00</Amt>
+                <Agt>
+                      <FinInstnId>
+                          <BICFI>DEUTDEFF</BICFI>  <!-- Example BIC -->
+                          <Nm>duetchbank</Nm>  <!-- Optional -->
+                      </FinInstnId>
+                </Agt>
+            </ChrgsInf>
+            <InstgAgt>
+                <FinInstnId>
+                    <BICFI>DEUTDEFF</BICFI>
+                </FinInstnId>
+            </InstgAgt>
+            <InstdAgt>
+                <FinInstnId>
+                    <BICFI>SOGEDEFF</BICFI>
+                </FinInstnId>
+            </InstdAgt>
+            <Dbtr>
+                <Nm>Debtor Company Name</Nm>
+                <PstlAdr>
+                    <StrtNm>Example Street</StrtNm>
+                    <BldgNb>123</BldgNb>
+                    <PstCd>12345</PstCd>
+                    <TwnNm>Example City</TwnNm>
+                    <Ctry>DE</Ctry>
+                </PstlAdr>
+                <Id>
+                    <OrgId>
+                        <LEI>9876543210ABCDEFGH12</LEI>
+                    </OrgId>
+                </Id>
+            </Dbtr>
+            <DbtrAcct>
+                <Id>
+                    <IBAN>DE89370400440532013000</IBAN>
+                </Id>
+            </DbtrAcct>
+            <DbtrAgt>
+                <FinInstnId>
+                    <BICFI>DEUTDEFF</BICFI>
+                </FinInstnId>
+            </DbtrAgt>
+            <CdtrAgt>
+                <FinInstnId>
+                    <BICFI>SOGEDEFF</BICFI>
+                </FinInstnId>
+            </CdtrAgt>
+            <Cdtr>
+                <Nm>Creditor Company Name</Nm>
+                <PstlAdr>
+                    <StrtNm>Creditor Street</StrtNm>
+                    <BldgNb>456</BldgNb>
+                    <PstCd>75001</PstCd>
+                    <TwnNm>Paris</TwnNm>
+                    <Ctry>FR</Ctry>
+                </PstlAdr>
+                <Id>
+                    <OrgId>
+                        <LEI>ABCDEF12345678901234</LEI>  <!-- ✅ Ends with 2 digits -->
+                    </OrgId>
+                </Id>
+            </Cdtr>
+            <CdtrAcct>
+                <Id>
+                    <IBAN>FR7630006000011234567890189</IBAN>
+                </Id>
+            </CdtrAcct>
+            <RmtInf>
+                <Strd>
+                    <CdtrRefInf>
+                        <Tp>
+                            <CdOrPrtry>
+                                <Cd>SCOR</Cd>
+                            </CdOrPrtry>
+                            <Issr>ISO</Issr>
+                        </Tp>
+                        <Ref>RF18539007547034</Ref>
+                    </CdtrRefInf>
+                    <AddtlRmtInf>Invoice payment February 2025</AddtlRmtInf>
+                </Strd>
+            </RmtInf>
+        </CdtTrfTxInf>
+    </FIToFICstmrCdtTrf>
+</Document>
