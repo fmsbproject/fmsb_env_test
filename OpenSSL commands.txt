@@ -1,3 +1,4 @@
+Windows system
 Step 1: Generate Master Key (RSA 4096)
 ```sh
 openssl genpkey -algorithm RSA -out master.key -pkeyopt rsa_keygen_bits:4096
@@ -36,4 +37,40 @@ openssl x509 -req -in C_TLS.csr -CA master.crt -CAkey master.key -CAcreateserial
 openssl x509 -req -in C_SGN.csr -CA master.crt -CAkey master.key -CAcreateserial -out C_SGN.crt -days 30 -sha256 -extfile "C:\Path\openssl.cnf"
 ```	
 This command is used to generate the Working Certificates from CSR by signnig them with signed Master Certificates.
+
+Linux system:
+
+Step 1: Generate Master Key (RSA 4096)
+```sh
+openssl genpkey -algorithm RSA -out master.key -pkeyopt rsa_keygen_bits:4096
+```
+
+Step 2: Generate Master CSR (RSA)
+```sh
+openssl req -new -key master.key -out master.csr -subj "/C=CH/postalCode=8021/L=Zurich/streetAddress=Badenerstrasse 69, P.O. Box/O=Connexio hope and develop/OU=Security/CN=Master Certificate" -addext "keyUsage = digitalSignature, keyEncipherment, keyCertSign" -addext "extendedKeyUsage = serverAuth, clientAuth" -config "C:\Path\openssl.cnf"
+```
+
+Step 3: Sign Master Certificate with Root CA 
+```sh
+openssl x509 -req -in master.csr -CA rootCA.crt -CAkey rootCA.key -CAcreateserial -out master.crt -days 365 -sha256 -extfile /etc/ssl/openssl.cnf
+```
+
+Step 4: Generate Working Keys
+```sh
+openssl genpkey -algorithm RSA-PSS -out C_TLS.key -pkeyopt rsa_keygen_bits:3072
+openssl genpkey -algorithm RSA-PSS -out C_SGN.key -pkeyopt rsa_keygen_bits:3072
+```
+
+Step 5: Generate Working Certificate CSRs
+```sh
+openssl req -new -key C_TLS.key -out C_TLS.csr -subj "/CN=C_TLS"  -addext "keyUsage = digitalSignature, keyEncipherment"  -addext "extendedKeyUsage = serverAuth" -config /etc/ssl/openssl.cnf
+openssl req -new -key C_SGN.key -out C_SGN.csr -subj "/CN=C_SGN" -addext "keyUsage = digitalSignature" -addext "extendedKeyUsage = codeSigning" -config /etc/ssl/openssl.cnf
+```
+
+Step 6: Sign Client CSRs Using Signed Master Certificate
+```sh
+openssl x509 -req -in C_TLS.csr -CA master.crt -CAkey master.key -CAcreateserial -out C_TLS.crt -days 30 -sha256 -extfile /etc/ssl/openssl.cnf
+openssl x509 -req -in C_SGN.csr -CA master.crt -CAkey master.key -CAcreateserial -out C_SGN.crt -days 30 -sha256 -extfile /etc/ssl/openssl.cnf
+```	
+
 
