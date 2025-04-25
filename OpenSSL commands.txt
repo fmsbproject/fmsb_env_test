@@ -1,19 +1,20 @@
-Windows system
+Keys and certificates generation
+
 Step 1: Generate Master Key (RSA 4096)
+
 ```sh
 openssl genpkey -algorithm RSA -out master.key -pkeyopt rsa_keygen_bits:4096
 ```
-This command cretaes a master key using RSA and 4096 bit key.
+This command creates a master key using RSA and a 4096 bit key.
 
 Step 2: Generate Master CSR (RSA)
 ```sh
-openssl req -new -key master.key -out master.csr -subj "/C=CH/postalCode=8021/L=Zurich/streetAddress=Badenerstrasse 69, P.O. Box/O=Connexio/OU=Security/CN=Master Certificate" -addext "keyUsage = digitalSignature, keyEncipherment, keyCertSign" -addext "extendedKeyUsage = serverAuth, clientAuth" -config "C:\Path\openssl.cnf"
-```
-This command is used to generate a CSR for the Master Certficate of Connexio. This certificate will act as an intermediatory certificate for the generation of the Working Certificates.
+openssl req -new -key master.key -out master.csr -subj "/C=CH/postalCode=8021/L=Zurich/streetAddress=Badenerstrasse 69, P.O. Box/O=Connexio/OU=Security/CN=Master Certificate" -addext "keyUsage = digitalSignature, keyEncipherment, keyCertSign" -addext "extendedKeyUsage = serverAuth, clientAuth" -config master.cnf```
+This command is used to generate a CSR for the Master Certificate of Connexio. This certificate will act as an intermediary certificate for the generation of the Working Certificates.
 
 Step 3: Sign Master Certificate with Root CA 
 ```sh
-openssl x509 -req -in master.csr -CA rootCA.crt -CAkey rootCA.key -CAcreateserial -out master.crt -days 365 -sha256 -extfile "C:\Path\openssl.cnf"
+openssl x509 -req -in master.csr -CA rootCA.crt -CAkey rootCA.key -CAcreateserial -out master.crt -days 365 -sha256 -extfile master.cnf
 ```
 This command is used to sign the Master certificate with the Root certificate of Connexio.
 
@@ -26,51 +27,29 @@ This command is used to generate the Working Keys.
 
 Step 5: Generate Working Certificate CSRs
 ```sh
-openssl req -new -key C_TLS.key -out C_TLS.csr -subj "/CN=C_TLS"  -addext "keyUsage = digitalSignature, keyEncipherment"  -addext "extendedKeyUsage = serverAuth" -config "C:\Path\openssl.cnf"
-openssl req -new -key C_SGN.key -out C_SGN.csr -subj "/CN=C_SGN" -addext "keyUsage = digitalSignature" -addext "extendedKeyUsage = codeSigning" -config "C:\Path\openssl.cnf"
+openssl req -new -key C_TLS.key -out C_TLS.csr -subj "/CN=C_TLS"  -addext "keyUsage = digitalSignature, keyEncipherment"  -addext "extendedKeyUsage = serverAuth" -config working.cnf
+openssl req -new -key C_DSC.key -out C_DSC.csr -subj "/CN=C_DSC" -addext "keyUsage = digitalSignature" -addext "extendedKeyUsage = codeSigning" -config working.cnf
 ```
 This command is used to generate the CSR for Working Certificates.(TLS and DSC)
 
 Step 6: Sign Client CSRs Using Signed Master Certificate
 ```sh
-openssl x509 -req -in C_TLS.csr -CA master.crt -CAkey master.key -CAcreateserial -out C_TLS.crt -days 30 -sha256 -extfile "C:\Path\openssl.cnf"
-openssl x509 -req -in C_SGN.csr -CA master.crt -CAkey master.key -CAcreateserial -out C_SGN.crt -days 30 -sha256 -extfile "C:\Path\openssl.cnf"
+openssl x509 -req -in C_TLS.csr -CA master.crt -CAkey master.key -CAcreateserial -out C_TLS.crt -days 30 -sha256 -extfile working.cnf -extensions client_cert
+openssl x509 -req -in C_DSC.csr -CA master.crt -CAkey master.key -CAcreateserial -out C_DSC.crt -days 30 -sha256 -extfile working.cnf -extensions email_cert
 ```	
-This command is used to generate the Working Certificates from CSR by signnig them with signed Master Certificates.
+This command is used to generate the Working Certificates from CSR by signing them with signed Master Certificates.
 
-Linux system:
+Signature
 
-Step 1: Generate Master Key (RSA 4096)
-```sh
-openssl genpkey -algorithm RSA -out master.key -pkeyopt rsa_keygen_bits:4096
-```
+Step1: Signing data to generate signature in DER format
 
-Step 2: Generate Master CSR (RSA)
-```sh
-openssl req -new -key master.key -out master.csr -subj "/C=CH/postalCode=8021/L=Zurich/streetAddress=Badenerstrasse 69, P.O. Box/O=Connexio hope and develop/OU=Security/CN=Master Certificate" -addext "keyUsage = digitalSignature, keyEncipherment, keyCertSign" -addext "extendedKeyUsage = serverAuth, clientAuth" -config "C:\Path\openssl.cnf"
-```
+openssl cms -sign -in data -signer C_DSC.crt -inkey C_DSC.key -out signature.der -outform DER  -keyopt rsa_padding_mode:pss -keyopt rsa_pss_saltlen:-1
 
-Step 3: Sign Master Certificate with Root CA 
-```sh
-openssl x509 -req -in master.csr -CA rootCA.crt -CAkey rootCA.key -CAcreateserial -out master.crt -days 365 -sha256 -extfile /etc/ssl/openssl.cnf
-```
+Step2: Conversion of PEM certificate to PKCS7 format for Business Messages, signedMessage, certificates.
 
-Step 4: Generate Working Keys
-```sh
-openssl genpkey -algorithm RSA-PSS -out C_TLS.key -pkeyopt rsa_keygen_bits:3072
-openssl genpkey -algorithm RSA-PSS -out C_SGN.key -pkeyopt rsa_keygen_bits:3072
-```
+openssl crl2pkcs7 -nocrl -certfile C_fullchain_dsc.crt -outform DER -out certificates.der
 
-Step 5: Generate Working Certificate CSRs
-```sh
-openssl req -new -key C_TLS.key -out C_TLS.csr -subj "/CN=C_TLS"  -addext "keyUsage = digitalSignature, keyEncipherment"  -addext "extendedKeyUsage = serverAuth" -config /etc/ssl/openssl.cnf
-openssl req -new -key C_SGN.key -out C_SGN.csr -subj "/CN=C_SGN" -addext "keyUsage = digitalSignature" -addext "extendedKeyUsage = codeSigning" -config /etc/ssl/openssl.cnf
-```
+Step3: Verification of signature
 
-Step 6: Sign Client CSRs Using Signed Master Certificate
-```sh
-openssl x509 -req -in C_TLS.csr -CA master.crt -CAkey master.key -CAcreateserial -out C_TLS.crt -days 30 -sha256 -extfile /etc/ssl/openssl.cnf
-openssl x509 -req -in C_SGN.csr -CA master.crt -CAkey master.key -CAcreateserial -out C_SGN.crt -days 30 -sha256 -extfile /etc/ssl/openssl.cnf
-```	
-
+openssl cms -verify -in extracted_signature.der -inform DER -content data -CAfile C_fullchain_dsc.crt.crt -certfile C_DSC.crt
 
