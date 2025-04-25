@@ -2,11 +2,19 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "BusinessMessage",
   "type": "object",
-  "required": ["sic_id", "uuid", "message_type", "payload"],
+  "required": ["uuid","messageGroup","sicID","XMLMessageType","signedMessage"],
   "properties": {
-    "sic_id": { "type": "string", "maxLength": 6 },
     "uuid": { "type": "string", "format": "uuid" },
-    "message_type": { "type": "string" },
-    "payload": { "type": "string" }
+    "messageGroup": {"type": "string","maxLength":2},
+    "sicID": { "type": "string", "maxLength": 6 },
+    "XMLMessageType": { "type": "string" },
+    "signedMessage": { "type": "object",
+                     "required": ["signedXML","signature","certificates"],
+                      "properties": {
+                       "signedXML": { "type": "string" },
+                        "signature": { "type": "string" },
+                        "certificates": { "type": "string" },
+                      }
+                     }
   }
 }
