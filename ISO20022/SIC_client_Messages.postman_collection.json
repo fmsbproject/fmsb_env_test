@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "f9c4830d-089a-440c-9c6c-44558d46acef",
+		"name": "SIC_client_Messages",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "38306059"
+	},
+	"item": [
+		{
+			"name": "RTGS_pacs_009_sample_IPLQTT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<Document xmlns=\"http://www.six-interbank-clearing.com/de/pacs.009.001.08.ch.03\" \r\n          xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" \r\n          xsi:schemaLocation=\"http://www.six-interbank-clearing.com/de/pacs.009.001.08.ch.03 pacs.009.001.08.ch.03.xsd\">\r\n\r\n    <FICdtTrf>\r\n        <GrpHdr>\r\n            <MsgId>pacs009-20231120-0901</MsgId>\r\n            <CreDtTm>2023-11-20T11:22:33.001Z</CreDtTm>\r\n            <NbOfTxs>1</NbOfTxs>\r\n            <SttlmInf>\r\n                <SttlmMtd>CLRG</SttlmMtd>\r\n                <ClrSys>\r\n                    <Cd>SIC</Cd>\r\n                </ClrSys>\r\n            </SttlmInf>\r\n        </GrpHdr>\r\n\r\n        <CdtTrfTxInf>\r\n            <PmtId>\r\n                <EndToEndId>NOTPROVIDED</EndToEndId>\r\n                <TxId>IP-20231120-0901</TxId>\r\n                <UETR>5380bfc6-d163-43ac-bbfc-1df00da7ea0a</UETR>\r\n            </PmtId>\r\n\r\n            <PmtTpInf>\r\n                <LclInstrm>\r\n                    <Prtry>IPLQTT</Prtry>\r\n                </LclInstrm>\r\n            </PmtTpInf>\r\n\r\n            <IntrBkSttlmAmt Ccy=\"CHF\">1000000</IntrBkSttlmAmt>\r\n            <IntrBkSttlmDt>2023-11-20</IntrBkSttlmDt>\r\n\r\n            <InstgAgt>\r\n                <FinInstnId>\r\n                    <ClrSysMmbId>\r\n                        <ClrSysId>\r\n                            <Cd>CHSIC</Cd>\r\n                        </ClrSysId>\r\n                        <MmbId>098064</MmbId>\r\n                    </ClrSysMmbId>\r\n                </FinInstnId>\r\n            </InstgAgt>\r\n\r\n            <InstdAgt>\r\n                <FinInstnId>\r\n                    <ClrSysMmbId>\r\n                        <ClrSysId>\r\n                            <Cd>CHSIC</Cd>\r\n                        </ClrSysId>\r\n                        <MmbId>098064</MmbId>\r\n                    </ClrSysMmbId>\r\n                </FinInstnId>\r\n            </InstdAgt>\r\n\r\n            <Dbtr>\r\n                <FinInstnId>\r\n                    <ClrSysMmbId>\r\n                        <ClrSysId>\r\n                            <Cd>CHSIC</Cd>\r\n                        </ClrSysId>\r\n                        <MmbId>098064</MmbId>\r\n                    </ClrSysMmbId>\r\n                </FinInstnId>\r\n            </Dbtr>\r\n\r\n            <DbtrAcct>\r\n                <Id>\r\n                    <Othr>\r\n                        <Id>098060</Id>\r\n                    </Othr>\r\n                </Id>\r\n            </DbtrAcct>\r\n\r\n            <Cdtr>\r\n                <FinInstnId>\r\n                    <ClrSysMmbId>\r\n                        <ClrSysId>\r\n                            <Cd>CHSIC</Cd>\r\n                        </ClrSysId>\r\n                        <MmbId>098064</MmbId>\r\n                    </ClrSysMmbId>\r\n                </FinInstnId>\r\n            </Cdtr>\r\n\r\n            <CdtrAcct>\r\n                <Id>\r\n                    <Othr>\r\n                        <Id>098062</Id>\r\n                    </Othr>\r\n                </Id>\r\n            </CdtrAcct>\r\n        </CdtTrfTxInf>\r\n    </FICdtTrf>\r\n\r\n</Document>\r\n",
+					"options": {
+						"raw": {
+							"language": "html"
+						}
+					}
+				},
+				"url": "https://122.165.73.156:8087/SIC/payments"
+			},
+			"response": []
+		},
+		{
+			"name": "RTGS_pacs_009_sample_F2FPMT.",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<Document xmlns=\"http://www.six-interbank-clearing.com/de/pacs.009.001.08.ch.03\">\r\n    <FICdtTrf>\r\n        <GrpHdr>\r\n            <MsgId>MSGID-pacs009-20231212-0001</MsgId>\r\n            <CreDtTm>2023-12-12T09:30:47</CreDtTm>\r\n            <NbOfTxs>1</NbOfTxs>\r\n            <SttlmInf>\r\n                <SttlmMtd>CLRG</SttlmMtd>\r\n                <ClrSys>\r\n                    <Cd>SIC</Cd>\r\n                </ClrSys>\r\n            </SttlmInf>\r\n        </GrpHdr>\r\n        <CdtTrfTxInf>\r\n            <PmtId>\r\n                <EndToEndId>NOTPROVIDED</EndToEndId>\r\n                <TxId>20231212-1-0009</TxId>\r\n                <UETR>b9d4fe18-5864-411c-ab09-81e5fc7aaf81</UETR>\r\n            </PmtId>\r\n            <PmtTpInf>\r\n                <LclInstrm>\r\n                    <Prtry>F2FPMT</Prtry>\r\n                </LclInstrm>\r\n            </PmtTpInf>\r\n            <IntrBkSttlmAmt Ccy=\"CHF\">1000000</IntrBkSttlmAmt>\r\n            <IntrBkSttlmDt>2023-12-12</IntrBkSttlmDt>\r\n            <InstgAgt>\r\n                <FinInstnId>\r\n                    <ClrSysMmbId>\r\n                        <ClrSysId>\r\n                            <Cd>CHSIC</Cd>\r\n                        </ClrSysId>\r\n                        <MmbId>098064</MmbId>\r\n                    </ClrSysMmbId>\r\n                </FinInstnId>\r\n            </InstgAgt>\r\n            <InstdAgt>\r\n                <FinInstnId>\r\n                    <ClrSysMmbId>\r\n                        <ClrSysId>\r\n                            <Cd>CHSIC</Cd>\r\n                        </ClrSysId>\r\n                        <MmbId>092052</MmbId>\r\n                    </ClrSysMmbId>\r\n                </FinInstnId>\r\n            </InstdAgt>\r\n            <Dbtr>\r\n                <FinInstnId>\r\n                    <BICFI>REMODEFF</BICFI>\r\n                </FinInstnId>\r\n            </Dbtr>\r\n            <Cdtr>\r\n                <FinInstnId>\r\n                    <BICFI>SCHBCHZH</BICFI>\r\n                </FinInstnId>\r\n            </Cdtr>\r\n        </CdtTrfTxInf>\r\n    </FICdtTrf>\r\n</Document>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": "https://122.165.73.156:8087/SIC/payments"
+			},
+			"response": []
+		},
+		{
+			"name": "RTGS_pacs_008_sample_CSTPMT_SCOR",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<Document xmlns=\"http://www.six-interbank-clearing.com/de/pacs.008.001.08.ch.02\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.six-interbank-clearing.com/de/pacs.008.001.08.ch.02 pacs.008.001.08.ch.02.xsd\">\r\n    <FIToFICstmrCdtTrf>\r\n        <GrpHdr>\r\n            <MsgId>MSGID-pacs008-20230122-0002</MsgId>\r\n            <CreDtTm>2023-01-22T09:30:50</CreDtTm>\r\n            <NbOfTxs>1</NbOfTxs>\r\n            <SttlmInf>\r\n                <SttlmMtd>CLRG</SttlmMtd>\r\n                <ClrSys>\r\n                    <Cd>SIC</Cd>\r\n                </ClrSys>\r\n            </SttlmInf>\r\n        </GrpHdr>\r\n        <CdtTrfTxInf>\r\n            <PmtId>\r\n                <EndToEndId>NOTPROVIDED</EndToEndId>\r\n                <TxId>20230122-1-0002</TxId>\r\n                <UETR>9d8ea53e-4189-454b-8907-d52b57d5ac6a</UETR>\r\n            </PmtId>\r\n            <PmtTpInf>\r\n                <LclInstrm>\r\n                    <Prtry>CSTPMT</Prtry>\r\n                </LclInstrm>\r\n            </PmtTpInf>\r\n            <IntrBkSttlmAmt Ccy=\"CHF\">1111</IntrBkSttlmAmt>\r\n            <IntrBkSttlmDt>2023-11-22</IntrBkSttlmDt>\r\n            <ChrgBr>SHAR</ChrgBr>\r\n            <InstgAgt>\r\n                <FinInstnId>\r\n                    <ClrSysMmbId>\r\n                        <ClrSysId>\r\n                            <Cd>CHSIC</Cd>\r\n                        </ClrSysId>\r\n                        <MmbId>098064</MmbId>\r\n                    </ClrSysMmbId>\r\n                </FinInstnId>\r\n            </InstgAgt>\r\n            <InstdAgt>\r\n                <FinInstnId>\r\n                    <ClrSysMmbId>\r\n                        <ClrSysId>\r\n                            <Cd>CHSIC</Cd>\r\n                        </ClrSysId>\r\n                        <MmbId>092052</MmbId>\r\n                    </ClrSysMmbId>\r\n                </FinInstnId>\r\n            </InstdAgt>\r\n            <Dbtr>\r\n                <Nm>Uhrengrosshandel Buxtehude</Nm>\r\n                <PstlAdr>\r\n                    <PstCd>9999</PstCd>\r\n                    <TwnNm>Buxtehude</TwnNm>\r\n                    <Ctry>CH</Ctry>\r\n                </PstlAdr>\r\n            </Dbtr>\r\n            <DbtrAcct>\r\n                <Id>\r\n                    <IBAN>CH4089999001234567890</IBAN>\r\n                </Id>\r\n            </DbtrAcct>\r\n            <DbtrAgt>\r\n                <FinInstnId>\r\n                    <ClrSysMmbId>\r\n                        <ClrSysId>\r\n                            <Cd>CHSIC</Cd>\r\n                        </ClrSysId>\r\n                        <MmbId>098064</MmbId>\r\n                    </ClrSysMmbId>\r\n                </FinInstnId>\r\n            </DbtrAgt>\r\n            <CdtrAgt>\r\n                <FinInstnId>\r\n                    <ClrSysMmbId>\r\n                        <ClrSysId>\r\n                            <Cd>CHSIC</Cd>\r\n                        </ClrSysId>\r\n                        <MmbId>092052</MmbId>\r\n                    </ClrSysMmbId>\r\n                </FinInstnId>\r\n            </CdtrAgt>\r\n            <Cdtr>\r\n                <Nm>Horlogerie du Joux</Nm>\r\n                <PstlAdr>\r\n                    <PstCd>1111</PstCd>\r\n                    <TwnNm>Les Huits</TwnNm>\r\n                    <Ctry>CH</Ctry>\r\n                </PstlAdr>\r\n            </Cdtr>\r\n            <CdtrAcct>\r\n                <Id>\r\n                    <IBAN>CH1708841000987654321</IBAN>\r\n                </Id>\r\n            </CdtrAcct>\r\n            <RmtInf>\r\n                <Strd>\r\n                    <CdtrRefInf>\r\n                        <Tp>\r\n                            <CdOrPrtry>\r\n                                <Cd>SCOR</Cd>\r\n                            </CdOrPrtry>\r\n                            <Issr>ISO</Issr>\r\n                        </Tp>\r\n                        <Ref>RF3620210917084619IQF0838</Ref>\r\n                    </CdtrRefInf>\r\n                </Strd>\r\n            </RmtInf>\r\n        </CdtTrfTxInf>\r\n    </FIToFICstmrCdtTrf>\r\n</Document>\r\n",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": "https://122.165.73.156:8087/SIC/payments"
+			},
+			"response": []
+		},
+		{
+			"name": "RTGS_pacs_008_sample_CSTPMT_QRR",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<Document xmlns=\"http://www.six-interbank-clearing.com/de/pacs.008.001.08.ch.02\">\r\n    <FIToFICstmrCdtTrf>\r\n        <GrpHdr>\r\n            <MsgId>MSGID-pacs008-20230122-0003</MsgId>\r\n            <CreDtTm>2023-01-22T09:30:55</CreDtTm>\r\n            <NbOfTxs>1</NbOfTxs>\r\n            <SttlmInf>\r\n                <SttlmMtd>CLRG</SttlmMtd>\r\n                <ClrSys>\r\n                    <Cd>SIC</Cd>\r\n                </ClrSys>\r\n            </SttlmInf>\r\n        </GrpHdr>\r\n        <CdtTrfTxInf>\r\n            <PmtId>\r\n                <EndToEndId>NOTPROVIDED</EndToEndId>\r\n                <TxId>20230122-1-0003</TxId>\r\n                <UETR>7379263f-750d-4058-a824-c488396b3b73</UETR>\r\n            </PmtId>\r\n            <PmtTpInf>\r\n                <LclInstrm>\r\n                    <Prtry>CSTPMT</Prtry>\r\n                </LclInstrm>\r\n            </PmtTpInf>\r\n            <IntrBkSttlmAmt Ccy=\"CHF\">1111</IntrBkSttlmAmt>\r\n            <IntrBkSttlmDt>2023-11-22</IntrBkSttlmDt>\r\n            <ChrgBr>SHAR</ChrgBr>\r\n            <InstgAgt>\r\n                <FinInstnId>\r\n                    <ClrSysMmbId>\r\n                        <ClrSysId>\r\n                            <Cd>CHSIC</Cd>\r\n                        </ClrSysId>\r\n                        <MmbId>098064</MmbId>\r\n                    </ClrSysMmbId>\r\n                </FinInstnId>\r\n            </InstgAgt>\r\n            <InstdAgt>\r\n                <FinInstnId>\r\n                    <ClrSysMmbId>\r\n                        <ClrSysId>\r\n                            <Cd>CHSIC</Cd>\r\n                        </ClrSysId>\r\n                        <MmbId>092052</MmbId>\r\n                    </ClrSysMmbId>\r\n                </FinInstnId>\r\n            </InstdAgt>\r\n            <Dbtr>\r\n                <Nm>Uhrengrosshandel Buxtehude</Nm>\r\n                <PstlAdr>\r\n                    <PstCd>9999</PstCd>\r\n                    <TwnNm>Buxtehude</TwnNm>\r\n                    <Ctry>CH</Ctry>\r\n                </PstlAdr>\r\n            </Dbtr>\r\n            <DbtrAcct>\r\n                <Id>\r\n                    <IBAN>CH4089999001234567890</IBAN>\r\n                </Id>\r\n            </DbtrAcct>\r\n            <DbtrAgt>\r\n                <FinInstnId>\r\n                    <ClrSysMmbId>\r\n                        <ClrSysId>\r\n                            <Cd>CHSIC</Cd>\r\n                        </ClrSysId>\r\n                        <MmbId>098064</MmbId>\r\n                    </ClrSysMmbId>\r\n                </FinInstnId>\r\n            </DbtrAgt>\r\n            <CdtrAgt>\r\n                <FinInstnId>\r\n                    <ClrSysMmbId>\r\n                        <ClrSysId>\r\n                            <Cd>CHSIC</Cd>\r\n                        </ClrSysId>\r\n                        <MmbId>092052</MmbId>\r\n                    </ClrSysMmbId>\r\n                </FinInstnId>\r\n            </CdtrAgt>\r\n            <Cdtr>\r\n                <Nm>Horlogerie du Joux</Nm>\r\n                <PstlAdr>\r\n                    <PstCd>1111</PstCd>\r\n                    <TwnNm>Les Huits</TwnNm>\r\n                    <Ctry>CH</Ctry>\r\n                </PstlAdr>\r\n            </Cdtr>\r\n            <CdtrAcct>\r\n                <Id>\r\n                    <IBAN>CH3931989000007090823</IBAN>\r\n                </Id>\r\n            </CdtrAcct>\r\n            <RmtInf>\r\n                <Strd>\r\n                    <CdtrRefInf>\r\n                        <Tp>\r\n                            <CdOrPrtry>\r\n                                <Prtry>QRR</Prtry>\r\n                            </CdOrPrtry>\r\n                        </Tp>\r\n                        <Ref>000004485014692349883995068</Ref>\r\n                    </CdtrRefInf>\r\n                    <AddtlRmtInf>ContractID 44532</AddtlRmtInf>\r\n                </Strd>\r\n            </RmtInf>\r\n        </CdtTrfTxInf>\r\n    </FIToFICstmrCdtTrf>\r\n</Document>\r\n",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": "https://122.165.73.156:8087/SIC/payments"
+			},
+			"response": []
+		},
+		{
+			"name": "RTGS_pacs_008_sample_CSTPMT_basic",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<Document xmlns=\"http://www.six-interbank-clearing.com/de/pacs.008.001.08.ch.02\" \r\n          xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" \r\n          xsi:schemaLocation=\"http://www.six-interbank-clearing.com/de/pacs.008.001.08.ch.02 pacs.008.001.08.ch.02.xsd\">\r\n    \r\n    <FIToFICstmrCdtTrf>\r\n        <GrpHdr>\r\n            <MsgId>MSGID-pacs008-20230122-0001</MsgId>\r\n            <CreDtTm>2023-01-22T09:30:47</CreDtTm>\r\n            <NbOfTxs>1</NbOfTxs>\r\n            <SttlmInf>\r\n                <SttlmMtd>CLRG</SttlmMtd>\r\n                <ClrSys>\r\n                    <Cd>SIC</Cd>\r\n                </ClrSys>\r\n            </SttlmInf>\r\n        </GrpHdr>\r\n        \r\n        <CdtTrfTxInf>\r\n            <PmtId>\r\n                <EndToEndId>NOTPROVIDED</EndToEndId>\r\n                <TxId>20230122-1-0001</TxId>\r\n                <UETR>eb6305c9-1f7f-49de-aed0-16487c27b42d</UETR>\r\n            </PmtId>\r\n            \r\n            <PmtTpInf>\r\n                <LclInstrm>\r\n                    <Prtry>CSTPMT</Prtry>\r\n                </LclInstrm>\r\n            </PmtTpInf>\r\n            \r\n            <IntrBkSttlmAmt Ccy=\"CHF\">1111</IntrBkSttlmAmt>\r\n            <IntrBkSttlmDt>2023-11-22</IntrBkSttlmDt>\r\n            <ChrgBr>SHAR</ChrgBr>\r\n            \r\n            <InstgAgt>\r\n                <FinInstnId>\r\n                    <ClrSysMmbId>\r\n                        <ClrSysId>\r\n                            <Cd>CHSIC</Cd>\r\n                        </ClrSysId>\r\n                        <MmbId>098064</MmbId>\r\n                    </ClrSysMmbId>\r\n                </FinInstnId>\r\n            </InstgAgt>\r\n            \r\n            <InstdAgt>\r\n                <FinInstnId>\r\n                    <ClrSysMmbId>\r\n                        <ClrSysId>\r\n                            <Cd>CHSIC</Cd>\r\n                        </ClrSysId>\r\n                        <MmbId>092052</MmbId>\r\n                    </ClrSysMmbId>\r\n                </FinInstnId>\r\n            </InstdAgt>\r\n            \r\n            <Dbtr>\r\n                <Nm>Uhrengrosshandel Müller</Nm>\r\n            </Dbtr>\r\n            \r\n            <DbtrAcct>\r\n                <Id>\r\n                    <IBAN>CH4089999001234567890</IBAN>\r\n                </Id>\r\n            </DbtrAcct>\r\n            \r\n            <DbtrAgt>\r\n                <FinInstnId>\r\n                    <ClrSysMmbId>\r\n                        <ClrSysId>\r\n                            <Cd>CHSIC</Cd>\r\n                        </ClrSysId>\r\n                        <MmbId>098064</MmbId>\r\n                    </ClrSysMmbId>\r\n                </FinInstnId>\r\n            </DbtrAgt>\r\n            \r\n            <CdtrAgt>\r\n                <FinInstnId>\r\n                    <ClrSysMmbId>\r\n                        <ClrSysId>\r\n                            <Cd>CHSIC</Cd>\r\n                        </ClrSysId>\r\n                        <MmbId>092052</MmbId>\r\n                    </ClrSysMmbId>\r\n                </FinInstnId>\r\n            </CdtrAgt>\r\n            \r\n            <Cdtr>\r\n                <Nm>Horlogerie du Joux</Nm>\r\n                <PstlAdr>\r\n                    <TwnNm>Les Huits</TwnNm>\r\n                    <Ctry>CH</Ctry>\r\n                </PstlAdr>\r\n            </Cdtr>\r\n            \r\n            <CdtrAcct>\r\n                <Id>\r\n                    <IBAN>CH1708841000987654321</IBAN>\r\n                </Id>\r\n            </CdtrAcct>\r\n        </CdtTrfTxInf>\r\n    </FIToFICstmrCdtTrf>\r\n</Document>\r\n",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": "https://122.165.73.156:8087/SIC/payments"
+			},
+			"response": []
+		}
+	]
+}
