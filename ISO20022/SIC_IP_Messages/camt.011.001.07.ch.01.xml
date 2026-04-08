@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="http://www.six-interbank-clearing.com/de/camt.011.001.07.ch.01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.six-interbank-clearing.com/de/camt.011.001.07.ch.01 camt.011.001.07.ch.01.xsd">
+	<ModfyLmt>
+		<MsgHdr>
+			<MsgId>MSGID-IP-camt011-20250912-1122</MsgId>
+			<CreDtTm>2025-09-12T08:17:38.970+02:00</CreDtTm>
+		</MsgHdr>
+		<LmtDtls>
+			<LmtId>
+				<Cur>
+					<SysId>
+						<MktInfrstrctrId>
+							<Cd>SIP</Cd>
+						</MktInfrstrctrId>
+					</SysId>
+					<Tp>
+						<Prtry>IPDLMI</Prtry>
+					</Tp>
+					<AcctOwnr>
+						<FinInstnId>
+							<ClrSysMmbId>
+								<MmbId>090343</MmbId>
+							</ClrSysMmbId>
+						</FinInstnId>
+					</AcctOwnr>
+					<AcctId>
+						<Othr>
+							<Id>090342</Id>
+						</Othr>
+					</AcctId>
+				</Cur>
+			</LmtId>
+			<NewLmtValSet>
+				<Amt>
+					<AmtWthCcy Ccy="CHF">1000</AmtWthCcy>
+				</Amt>
+			</NewLmtValSet>
+		</LmtDtls>
+	</ModfyLmt>
+</Document>

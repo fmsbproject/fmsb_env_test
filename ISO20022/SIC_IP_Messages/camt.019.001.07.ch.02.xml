@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Document xmlns="http://www.six-interbank-clearing.com/de/camt.019.001.07.ch.02">
+ <RtrBizDayInf>
+  <MsgHdr>
+   <MsgId>CDSO-124906-20368-8998</MsgId>
+   <CreDtTm>2025-10-06T12:33:59.060+02:00</CreDtTm>
+   <QryNm>IPCDCI</QryNm>
+  </MsgHdr>
+  <RptOrErr>
+   <BizRpt>
+    <SysId>
+     <MktInfrstrctrId>
+      <Cd>SIP</Cd>
+     </MktInfrstrctrId>
+    </SysId>
+    <BizDayOrErr>
+     <BizDayInf>
+      <SysInfPerCcy>
+       <SysCcy>CHF</SysCcy>
+       <Evt>
+        <Tp>
+         <Prtry>
+          <Id>CDC</Id>
+         </Prtry>
+        </Tp>
+        <SchdldTm>2025-10-06T12:31:03.866+02:00</SchdldTm>
+        <FctvTm>2025-10-06T12:33:58.998+02:00</FctvTm>
+        <StartTm>2025-10-07T00:00:00.000+02:00</StartTm>
+        <EndTm>2025-10-06T00:00:00.000+02:00</EndTm>
+       </Evt>
+      </SysInfPerCcy>
+     </BizDayInf>
+    </BizDayOrErr>
+   </BizRpt>
+  </RptOrErr>
+ </RtrBizDayInf>
+</Document>

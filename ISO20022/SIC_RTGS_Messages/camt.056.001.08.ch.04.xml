@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="http://www.six-interbank-clearing.com/de/camt.056.001.08.ch.04" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.six-interbank-clearing.com/de/camt.056.001.08.ch.04 camt.056.001.08.ch.04.xsd">
+	<FIToFIPmtCxlReq>
+		<Assgnmt>
+			<Id>MSGID-camt056-20250903-888</Id>
+			<Assgnr>
+				<Agt>
+					<FinInstnId>
+						<ClrSysMmbId>
+							<ClrSysId>
+								<Cd>CHSIC</Cd>
+							</ClrSysId>
+							<MmbId>090343</MmbId>
+						</ClrSysMmbId>
+						<Othr>
+							<Id>SIC</Id>
+						</Othr>
+					</FinInstnId>
+				</Agt>
+			</Assgnr>
+			<Assgne>
+				<Agt>
+					<FinInstnId>
+						<ClrSysMmbId>
+							<ClrSysId>
+								<Cd>CHSIC</Cd>
+							</ClrSysId>
+							<MmbId>090343</MmbId>
+						</ClrSysMmbId>
+					</FinInstnId>
+				</Agt>
+			</Assgne>
+			<CreDtTm>2025-09-03T03:11:12</CreDtTm>
+		</Assgnmt>
+		<Undrlyg>
+			<TxInf>
+				<CxlId>CXLID-Camt056TxId-2509037305</CxlId>
+				<OrgnlGrpInf>
+					<OrgnlMsgId>MSGID-pacs008-250903-xx7305</OrgnlMsgId>
+					<OrgnlMsgNmId>pacs.008</OrgnlMsgNmId>
+				</OrgnlGrpInf>
+				<OrgnlTxId>TxId-2509037305</OrgnlTxId>
+				<OrgnlUETR>eb6305c9-1f7f-49de-aed0-842509037305</OrgnlUETR>
+				<OrgnlIntrBkSttlmAmt Ccy="CHF">101.00</OrgnlIntrBkSttlmAmt>
+				<OrgnlIntrBkSttlmDt>2025-09-04</OrgnlIntrBkSttlmDt>
+				<CxlRsnInf>
+					<Orgtr>
+						<Nm>Uhrengrosshandel Buxtehude</Nm>
+					</Orgtr>
+					<Rsn>
+						<Cd>CUST</Cd>
+					</Rsn>
+				</CxlRsnInf>
+			</TxInf>
+		</Undrlyg>
+	</FIToFIPmtCxlReq>
+</Document>

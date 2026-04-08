@@ -1,0 +1,77 @@
+<Document xmlns="http://www.six-interbank-clearing.com/de/pacs.004.001.09.ch.02" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.six-interbank-clearing.com/de/pacs.004.001.09.ch.02.xsd">
+ <PmtRtr>
+  <GrpHdr>
+   <MsgId>MSGID20250901000</MsgId>
+   <CreDtTm>2025-09-01T11:00:41</CreDtTm>
+   <NbOfTxs>1</NbOfTxs>
+   <TtlRtrdIntrBkSttlmAmt Ccy="CHF">21.00</TtlRtrdIntrBkSttlmAmt>
+   <SttlmInf>
+    <SttlmMtd>CLRG</SttlmMtd>
+    <ClrSys>
+     <Cd>SIC</Cd>
+    </ClrSys>
+   </SttlmInf>
+  </GrpHdr>
+  <TxInf>
+   <RtrId>1</RtrId>
+   <OrgnlGrpInf>
+    <OrgnlMsgId>OriginalMessageId1</OrgnlMsgId>
+    <OrgnlMsgNmId>pacs.008</OrgnlMsgNmId>
+   </OrgnlGrpInf>
+   <OrgnlTxId>OriginalTransactionId1</OrgnlTxId>
+   <OrgnlUETR>eb6305c9-1f7f-49de-aed0-842508197301</OrgnlUETR>
+   <OrgnlIntrBkSttlmAmt Ccy="CHF">21.00</OrgnlIntrBkSttlmAmt>
+   <OrgnlIntrBkSttlmDt>2025-08-21</OrgnlIntrBkSttlmDt>
+   <RtrdIntrBkSttlmAmt Ccy="CHF">21.00</RtrdIntrBkSttlmAmt>
+   <IntrBkSttlmDt>2025-09-01</IntrBkSttlmDt>
+   <ClrSysRef>CSTRTN</ClrSysRef>
+   <InstgAgt>
+    <FinInstnId>
+     <ClrSysMmbId>
+      <ClrSysId>
+       <Cd>CHSIC</Cd>
+      </ClrSysId>
+      <MmbId>090343</MmbId>
+     </ClrSysMmbId>
+    </FinInstnId>
+   </InstgAgt>
+   <InstdAgt>
+    <FinInstnId>
+     <ClrSysMmbId>
+      <ClrSysId>
+       <Cd>CHSIC</Cd>
+      </ClrSysId>
+      <MmbId>099065</MmbId>
+     </ClrSysMmbId>
+    </FinInstnId>
+   </InstdAgt>
+   <RtrChain>
+    <Dbtr>
+     <Pty>
+		<Nm>DebtorAddress1</Nm>
+		<PstlAdr>
+			<AdrLine>DebtorAddress2</AdrLine>
+		</PstlAdr>
+	 </Pty>
+    </Dbtr>
+    <Cdtr>
+     <Pty>
+		<Nm>CreditorAddress1</Nm>
+		<PstlAdr>
+			<AdrLine>CreditorAddress2</AdrLine>
+		</PstlAdr>
+	  </Pty>
+    </Cdtr>
+   </RtrChain>
+   <RtrRsnInf>
+    <Orgtr>
+     <Nm>Banque Commerciale</Nm>
+    </Orgtr>
+    <Rsn>
+     <Cd>FOCR</Cd>
+    </Rsn>
+    <AddtlInf>TEST pacs.004 returns on pacs.008</AddtlInf>
+   </RtrRsnInf>
+  </TxInf>
+ </PmtRtr>
+</Document>

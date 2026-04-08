@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="http://www.six-interbank-clearing.com/de/pacs.008.001.08.ch.02" >
+	<FIToFICstmrCdtTrf>
+		<GrpHdr>
+			<MsgId>MSGID-IP-pacs008-2509193239</MsgId>
+			<!--CreDtTm>2025-09-19T11:02:45.515+02:00</CreDtTm-->
+            <CreDtTm>2025-09-19T13:02:46.515+02:00</CreDtTm>
+			<NbOfTxs>1</NbOfTxs>
+			<TtlIntrBkSttlmAmt Ccy="CHF">9000.00</TtlIntrBkSttlmAmt>
+			<SttlmInf>
+				<SttlmMtd>CLRG</SttlmMtd>
+				<ClrSys>
+					<Cd>SIP</Cd>
+				</ClrSys>
+			</SttlmInf>
+		</GrpHdr>
+		<CdtTrfTxInf>
+			<PmtId>
+				<InstrId>InstId2509193239</InstrId>
+				<EndToEndId>EToEId2509193239</EndToEndId>
+				<TxId>IP-2509193239</TxId>
+				<UETR>53911488-031e-4c11-bc75-c72509193239</UETR>
+			</PmtId>
+			<PmtTpInf>
+				<LclInstrm>
+					<Prtry>IPCPMT</Prtry>
+				</LclInstrm>
+				<CtgyPurp>
+					<Cd>SALA</Cd>
+				</CtgyPurp>
+			</PmtTpInf>
+			<IntrBkSttlmAmt Ccy="CHF">9000.00</IntrBkSttlmAmt>
+			<IntrBkSttlmDt>2025-09-19</IntrBkSttlmDt>
+			<AccptncDtTm>2025-09-19T13:02:46.615+02:00</AccptncDtTm>
+			<InstdAmt Ccy="CHF">9000.00</InstdAmt>
+			
+			<ChrgBr>SHAR</ChrgBr>
+			
+			<InstgAgt>
+				<FinInstnId>
+					<ClrSysMmbId>
+						<ClrSysId>
+							<Cd>CHSIC</Cd>
+						</ClrSysId>
+						<MmbId>090343</MmbId>
+					</ClrSysMmbId>
+				</FinInstnId>
+			</InstgAgt>
+			<InstdAgt>
+				<FinInstnId>
+					<ClrSysMmbId>
+						<ClrSysId>
+							<Cd>CHSIC</Cd>
+						</ClrSysId>
+						<MmbId>099200</MmbId>
+					</ClrSysMmbId>
+				</FinInstnId>
+			</InstdAgt>
+			<UltmtDbtr>
+				<Nm>John Smith</Nm>
+				<PstlAdr>
+					<AdrLine>Sampleroad 1</AdrLine>
+					<AdrLine>Sampletown</AdrLine>
+				</PstlAdr>
+			</UltmtDbtr>
+			<Dbtr>
+				<Nm>Max Mustermann</Nm>
+				<PstlAdr>
+					<Ctry>CH</Ctry>
+					<AdrLine>Beispielstrasse</AdrLine>
+					<AdrLine>9898 Musterhausen</AdrLine>
+				</PstlAdr>
+			</Dbtr>
+			<DbtrAcct>
+				<Id>
+					<IBAN>CH4089999001234567890</IBAN>
+				</Id>
+			</DbtrAcct>
+			<DbtrAgt>
+				<FinInstnId>
+					<ClrSysMmbId>
+						<ClrSysId>
+							<Cd>CHSIC</Cd>
+						</ClrSysId>
+						<MmbId>090343</MmbId>
+					</ClrSysMmbId>
+				</FinInstnId>
+			</DbtrAgt>
+			<CdtrAgt>
+				<FinInstnId>
+					<ClrSysMmbId>
+						<ClrSysId>
+							<Cd>CHSIC</Cd>
+						</ClrSysId>
+						<MmbId>099200</MmbId>
+					</ClrSysMmbId>
+				</FinInstnId>
+			</CdtrAgt>
+			<Cdtr>
+				<Nm>Martha Müller</Nm>
+				<PstlAdr>
+					<AdrLine>Musterstrasse 99</AdrLine>
+					<AdrLine>CH-8989 Beispieldorf</AdrLine>
+				</PstlAdr>
+			</Cdtr>
+			<CdtrAcct>
+				<Id>
+					<IBAN>CH1708841000987654321</IBAN>
+				</Id>
+			</CdtrAcct>
+			<UltmtCdtr>
+				<Nm>Hans Müller</Nm>
+			</UltmtCdtr>
+			<Purp>
+				<Cd>SPSP</Cd>
+			</Purp>
+			<RmtInf>
+				<Ustrd>Lohnzahlung 3. Quartal</Ustrd>
+			</RmtInf>
+		</CdtTrfTxInf>
+	</FIToFICstmrCdtTrf>
+</Document>

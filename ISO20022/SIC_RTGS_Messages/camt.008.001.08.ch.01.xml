@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><Document xmlns="http://www.six-interbank-clearing.com/de/camt.008.001.08.ch.01">
+ <CclTx>
+  <MsgHdr>
+   <MsgId>CONEXIO03092025CAMT00813</MsgId>
+   <CreDtTm>2025-09-03T03:38:10</CreDtTm>
+   <ReqTp>
+    <Prtry>
+     <Id>SIC</Id>
+    </Prtry>
+   </ReqTp>
+  </MsgHdr>
+  <PmtId>
+   <LngBizId>
+    <TxId>TxId2509031946</TxId>
+    <IntrBkSttlmAmt>101.00</IntrBkSttlmAmt>
+    <IntrBkSttlmDt>2025-09-04</IntrBkSttlmDt>
+    <InstgAgt>
+     <FinInstnId>
+      <ClrSysMmbId>
+       <ClrSysId>
+        <Cd>CHSIC</Cd>
+       </ClrSysId>
+       <MmbId>090343</MmbId>
+      </ClrSysMmbId>
+     </FinInstnId>
+    </InstgAgt>
+    <InstdAgt>
+     <FinInstnId>
+      <ClrSysMmbId>
+       <ClrSysId>
+        <Cd>CHSIC</Cd>
+       </ClrSysId>
+       <MmbId>090343</MmbId>
+      </ClrSysMmbId>
+     </FinInstnId>
+    </InstdAgt>
+   </LngBizId>
+  </PmtId>
+  <CxlRsn>
+   <Rsn>
+    <Prtry>invalid amount</Prtry>
+   </Rsn>
+  </CxlRsn>
+ </CclTx>
+</Document>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="http://www.six-interbank-clearing.com/de/camt.048.001.05.ch.01" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://www.six-interbank-clearing.com/de/camt.048.001.05.ch.01 camt.048.001.05.ch.01.xsd">
+  <ModfyRsvatn>
+    <MsgHdr>
+      <MsgId>CONEXIO030920250001</MsgId>
+      <CreDtTm>2025-09-03T03:11:00</CreDtTm>
+    </MsgHdr>
+    <RsvatnId>
+      <Cur>
+        <SysId>
+          <MktInfrstrctrId>
+            <Cd>SIC</Cd>
+          </MktInfrstrctrId>
+        </SysId>
+        <Tp>
+          <Prtry>PTRES</Prtry>
+        </Tp>
+        <AcctOwnr>
+          <FinInstnId>
+            <ClrSysMmbId>
+              <MmbId>090343</MmbId>
+            </ClrSysMmbId>
+          </FinInstnId>
+        </AcctOwnr>
+        <AcctId>
+          <Othr>
+            <Id>090340</Id>
+          </Othr>
+        </AcctId>
+      </Cur>
+    </RsvatnId>
+    <NewRsvatnValSet>
+      <Amt>
+        <AmtWthtCcy>100.00</AmtWthtCcy>
+      </Amt>
+    </NewRsvatnValSet>
+  </ModfyRsvatn>
+</Document>

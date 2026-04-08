@@ -1,0 +1,94 @@
+<Document xmlns="http://www.six-interbank-clearing.com/de/pacs.008.001.08.ch.02" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.six-interbank-clearing.com/de/pacs.008.001.08.ch.02 pacs.008.001.08.ch.02.xsd">
+	<FIToFICstmrCdtTrf>
+		<GrpHdr>
+			<MsgId>MSGIDpacs082509032007</MsgId>
+		    <CreDtTm>2025-09-03T15:26:21</CreDtTm>           
+			<NbOfTxs>1</NbOfTxs>
+			<TtlIntrBkSttlmAmt Ccy="CHF">101.00</TtlIntrBkSttlmAmt>
+			<SttlmInf>
+				<SttlmMtd>CLRG</SttlmMtd>
+				<ClrSys>
+					<Cd>SIC</Cd>
+				</ClrSys>
+			</SttlmInf>
+		</GrpHdr>
+		<CdtTrfTxInf>
+			<PmtId>
+				<EndToEndId>CONEXIO2509032007</EndToEndId>
+				<TxId>TxId2509032007</TxId>
+				<UETR>eb6305c9-1f7f-49de-aed0-842509032007</UETR>
+			</PmtId>
+			<PmtTpInf>
+                
+				<LclInstrm>
+					<Prtry>CSTPMT</Prtry>
+				</LclInstrm>
+               
+			</PmtTpInf>
+			<IntrBkSttlmAmt Ccy="CHF">101.00</IntrBkSttlmAmt>
+			<!--IntrBkSttlmDt>{{date}}</IntrBkSttlmDt-->
+            <IntrBkSttlmDt>2025-09-04</IntrBkSttlmDt>
+            <ChrgBr>SLEV</ChrgBr>
+            <InstgAgt>
+                <FinInstnId>
+                    <ClrSysMmbId>
+                        <ClrSysId>
+                            <Cd>CHSIC</Cd>
+                        </ClrSysId>
+                        <MmbId>090343</MmbId>
+                    </ClrSysMmbId>
+                </FinInstnId>
+            </InstgAgt>
+            <InstdAgt>
+                <FinInstnId>
+                    <ClrSysMmbId>
+                        <ClrSysId>
+                            <Cd>CHSIC</Cd>
+                        </ClrSysId>
+                        <MmbId>090343</MmbId>
+                    </ClrSysMmbId>
+                </FinInstnId>
+            </InstdAgt>
+            <Dbtr>
+                <Nm>Test Case-04</Nm>              
+            </Dbtr>
+			<DbtrAcct>
+                <Id>
+                    <IBAN>CH1809034011623852957</IBAN>
+                </Id>
+            </DbtrAcct>
+            <DbtrAgt>
+                <FinInstnId>
+                    <ClrSysMmbId>
+                        <ClrSysId>
+                            <Cd>CHSIC</Cd>
+                        </ClrSysId>
+                        <MmbId>090343</MmbId>
+                    </ClrSysMmbId>
+                </FinInstnId>
+            </DbtrAgt>
+            <CdtrAgt>
+                <FinInstnId>
+                    <ClrSysMmbId>
+                        <ClrSysId>
+                            <Cd>CHSIC</Cd>
+                        </ClrSysId>
+                        <MmbId>090343</MmbId>
+                    </ClrSysMmbId>
+                </FinInstnId>
+            </CdtrAgt>
+            <Cdtr>
+                <Nm>Test Case-007</Nm>
+            </Cdtr>
+			<CdtrAcct>
+               <Id>
+                   <IBAN>CH8809034011623852958</IBAN>
+               </Id>
+            </CdtrAcct>
+            <RmtInf>
+                <Ustrd>to test pacs.008_tc_301</Ustrd>
+            </RmtInf>
+        </CdtTrfTxInf>
+    </FIToFICstmrCdtTrf>
+</Document>
+

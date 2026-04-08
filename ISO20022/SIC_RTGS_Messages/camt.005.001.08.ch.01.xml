@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><Document xmlns="http://www.six-interbank-clearing.com/de/camt.005.001.08.ch.01" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.six-interbank-clearing.com/de/camt.005.001.08.ch.01 camt.005.001.08.ch.01">
+ <GetTx>
+  <MsgHdr>
+   <MsgId>CONEXIO-040925CAMT05777</MsgId>
+   <CreDtTm>2025-09-04T10:15:10</CreDtTm>
+   <ReqTp>
+    <Prtry>
+     <Id>SIC</Id>
+    </Prtry>
+   </ReqTp>
+  </MsgHdr>
+  <TxQryDef>
+   <TxCrit>
+    <NewCrit>
+     <NewQryNm>STXQRY</NewQryNm>
+     <SchCrit>
+      <PmtFr>
+       <MmbId>
+        <FinInstnId>
+         <ClrSysMmbId>
+          <MmbId>090343</MmbId>
+         </ClrSysMmbId>
+        </FinInstnId>
+       </MmbId>
+      </PmtFr>
+      <PmtSch>
+       <TxId>TxId2509031354</TxId>
+      </PmtSch>
+      <AcctNtrySch>
+       <AcctOwnr>
+        <Id>
+         <OrgId>
+          <Othr>
+           <Id>090343</Id>
+          </Othr>
+         </OrgId>
+        </Id>
+       </AcctOwnr>
+      </AcctNtrySch>
+     </SchCrit>
+    </NewCrit>
+   </TxCrit>
+  </TxQryDef>
+ </GetTx>
+</Document>
+ 
